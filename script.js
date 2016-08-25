@@ -22,10 +22,12 @@ for (var i = 0; i < 100; i++) {
   var random = randomColors()
 
   if (i % 2 === 0) {
-    div.style.backgroundColor = setInterval(randomColors(), 500);
+    div.style.backgroundColor = random;
   } else {
-    div.style.backgroundColor = setInterval(randomColors(), 500);
+    div.style.backgroundColor = random;
   }
 
   body.appendChild(div);
 }
+
+setTimeout(function () { location.reload(true); }, 2000);
