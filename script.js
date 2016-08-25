@@ -7,12 +7,10 @@ for (var i = 0; i < 100; i++) {
   div.style.paddingBottom = "11.1%";
   div.style.float = "left";
 
-  var random = randomColors()
-
   if (i % 2 === 0) {
-    div.style.backgroundColor = random;
+    div.style.backgroundColor = "red";
   } else {
-    div.style.backgroundColor = random;
+    div.style.backgroundColor = "#342534";
   }
 
   body.appendChild(div);
