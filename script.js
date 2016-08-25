@@ -13,7 +13,7 @@ function randomColors () {
   return "#" + newArray.join("");
 }
 
-var random = randomColors()
+var colors = ["red", "black"]
 
 for (var i = 0; i < 100; i++) {
   var div = document.createElement('div');
@@ -24,9 +24,9 @@ for (var i = 0; i < 100; i++) {
   var random = randomColors()
 
   if (i % 2 === 0) {
-    div.style.backgroundColor = random;
+    div.style.backgroundColor = setInterval(randomColors(), 2000);
   } else {
-    div.style.backgroundColor = random;
+    div.style.backgroundColor = setInterval(randomColors(), 2000);
   }
 
   body.appendChild(div);
