@@ -1,4 +1,5 @@
 // Your JS goes here
+var boxCount = 0;
 var body = document.getElementsByTagName('body')[0]
 
 function randomColors () {
@@ -11,6 +12,19 @@ function randomColors () {
   }
 
   return "#" + newArray.join("");
+}
+
+function makeDiv() {
+  var div = document.createElement('div');
+  div.setAttribute('id', boxCount)
+  div.style.width = "11.1%";
+  div.style.paddingBottom = "11.1%";
+  div.style.float = "left";
+  boxCount++
+}
+
+for (var i = 0; i < 100; i++) {
+  makeDiv()
 }
 
 setInterval(function () {
