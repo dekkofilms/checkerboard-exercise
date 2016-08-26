@@ -13,21 +13,21 @@ function randomColors () {
   return "#" + newArray.join("");
 }
 
-for (var i = 0; i < 100; i++) {
-  var div = document.createElement('div');
-  div.style.width = "11.1%";
-  div.style.paddingBottom = "11.1%";
-  div.style.float = "left";
+setInterval(function () {
+  for (var i = 0; i < 100; i++) {
+    var div = document.createElement('div');
+    div.style.width = "11.1%";
+    div.style.paddingBottom = "11.1%";
+    div.style.float = "left";
 
-  var random = randomColors()
+    var random = randomColors()
 
-  if (i % 2 === 0) {
-    div.style.backgroundColor = random;
-  } else {
-    div.style.backgroundColor = random;
+    if (i % 2 === 0) {
+      div.style.backgroundColor = randomColors();
+    } else {
+      div.style.backgroundColor = randomColors();
+    }
+
+    body.appendChild(div);
   }
-
-  body.appendChild(div);
-}
-
-setTimeout(function () { location.reload(true); }, 2000);
+}, 2000)
