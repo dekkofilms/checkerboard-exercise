@@ -20,6 +20,7 @@ function makeDiv() {
   div.style.width = "11.1%";
   div.style.paddingBottom = "11.1%";
   div.style.float = "left";
+  body.appendChild(div)
   boxCount++
 }
 
@@ -29,19 +30,13 @@ for (var i = 0; i < 100; i++) {
 
 setInterval(function () {
   for (var i = 0; i < 100; i++) {
-    var div = document.createElement('div');
-    div.style.width = "11.1%";
-    div.style.paddingBottom = "11.1%";
-    div.style.float = "left";
-
+    var scanDiv = document.getElementById(i);
     var random = randomColors()
 
     if (i % 2 === 0) {
-      div.style.backgroundColor = randomColors();
+      scanDiv.style.backgroundColor = randomColors();
     } else {
-      div.style.backgroundColor = randomColors();
+      scanDiv.style.backgroundColor = randomColors();
     }
-
-    body.appendChild(div);
   }
 }, 2000)
